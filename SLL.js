@@ -10,7 +10,7 @@ class SLL { // The singly-linked list class itself
         this.head = null; // Head points to first node
     }
 
-   length() {
+    length() {
         var runner = this.head;
         var numNodes = 0;
         while(runner) {
@@ -19,6 +19,7 @@ class SLL { // The singly-linked list class itself
         }
         return numNodes;
     }
+
 
     contains(value) {
         var runner = this.head;
@@ -63,5 +64,23 @@ class SLL { // The singly-linked list class itself
         // // Ternary operator: condition ? value_if_true : value_if_false
         // return this.head ? this.head.value : null;
         // // return this.head == null ? null : this.head.value;
+    }
+
+    // Display the values of all the nodes in the list
+    display() {
+        var listStr = ""; // Empty string that will contain the values of the list
+        // Edge case: list is empty
+        if (this.head == null) {
+            return ""; // Could say "return 'Empty list'"
+        }
+        // We have at least one node
+        listStr += this.head.value; // Concatenates the first value in the list
+        // For the second node onwards, we'll add ", " + value;
+        var runner = this.head.next;
+        while (runner != null) {
+            listStr += ", " + runner.value; // Add the node's value to the list
+            runner = runner.next; // Move the runner to the next node
+        }
+        return listStr;
     }
 }
