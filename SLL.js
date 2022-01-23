@@ -10,8 +10,14 @@ class SLL { // The singly-linked list class itself
         this.head = null; // Head points to first node
     }
 
-    length() {
-        
+   length() {
+        var runner = this.head;
+        var numNodes = 0;
+        while(runner) {
+            nodes++;
+            runner = runner.next;
+        }
+        return numNodes;
     }
 
     contains(value) {
