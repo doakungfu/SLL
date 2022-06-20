@@ -102,3 +102,5 @@ class SLL { // The singly-linked list class itself
         return `max: ${max}, min: ${min}, avg: ${sum/this.length()}`
     }
 }
+
+// note
